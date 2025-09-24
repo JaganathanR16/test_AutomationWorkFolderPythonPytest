@@ -1,0 +1,38 @@
+CSV -> useridpw.csv
+
+Description -> Login Credancial
+
+Folder -> 1_AI_QA_MasterData_CSV
+--------------------------------------------------------
+CSV -> DegreeBranchMappingTemplate_1.csv
+ie., 1_AI_QA_MasterData_CSV/DegreeBranchMappingTemplate_1.csv
+
+Description -> Master Data:
+1) StreamCode, StreamName, 
+2) DegreeTypeCode, DegreeTypeName, 
+3) DegreeCode, DegreeName, DegreeShortName,
+4) BranchCode, BranchName, BranchShortName
+
+Folder -> 1_AI_QA_MasterData_CSV
+--------------------------------------------------------
+CSV -> 1_Unique_StreamCode_StreamName.csv
+
+py -> test_AI_QA_Stream_Unique_1.py 
+pytest test_AI_QA_Stream_Unique_1.py --html=report1.html
+pytest test_AI_QA_Stream_MultipleData_1.py --html=report3.html
+
+Description -> Unique Stream Data
+Distinct 1) StreamCode, StreamName Stored:
+
+Folder -> 1_AI_QA_MasterData_CSV -> 2_AI_QA_MasterData_Unique_Input
+--------------------------------------------------------
+CSV ->  2_Unique_DegreeTypeCode_DegreeTypeName.csv
+
+py -> test_AI_QA_Degree_Unique_2.py
+pytest test_AI_QA_Degree_Unique_2.py --html=report1.html
+pytest test_AI_QA_DegreeType_MultipleDate_2.py --html=report2.html
+
+Distinct 2) DegreeTypeCode, DegreeTypeName Stored:
+
+Folder -> 1_AI_QA_MasterData_CSV -> 2_AI_QA_MasterData_Unique_Input
+--------------------------------------------------------
